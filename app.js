@@ -10,7 +10,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("hey");
+  fs.readdir("./files", (err, files) => {
+    if (err) {
+      console.log(err);
+    }
+    else res.render("index", { files });
+  });
 });
 
 app.get("/create", (req, res) => {
@@ -27,5 +32,6 @@ app.get("/create", (req, res) => {
     res.send("file created");
   });
 });
+
 
 app.listen(3000);
