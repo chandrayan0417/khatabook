@@ -1,0 +1,23 @@
+{
+  "name": "khatabook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandrayan0417/khatabook.git"
+  },
+  "author": "chandrayan0417",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chandrayan0417/khatabook/issues"
+  },
+  "homepage": "https://github.com/chandrayan0417/khatabook#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
