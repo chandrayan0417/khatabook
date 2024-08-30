@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/create-page.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="nav">
+        <div id="nav1">
+          <a href="/"><h1>Khatabook</h1></a>
+        </div>
+        <div id="nav2">
+          <a href="/">Home</a>
+          <a href="/create">Create New Hisaab</a>
+        </div>
+      </div>
+
+      <div id="content">
+        <h2>Create New Hisaab : <%= filename %></h2>
+        <form action="/createhisaab" method="post">
+          <!-- <input
+            id="title"
+            name="title"
+            type="text"
+            placeholder="Shopping ka hisaab, ghar ka kharch..."
+          /> -->
+          <textarea
+            name="hisaab"
+            id="hisaab"
+            placeholder="write your hisaab"
+          ></textarea>
+          <input id="submit" type="submit" value="Create Hisaab" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

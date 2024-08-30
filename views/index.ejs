@@ -3,11 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Khatabook</title>
+    <link rel="stylesheet" href="/css/home-page.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <% files.forEach((file)=>{ %>
-    <p><%= file %></p>
-    <% }) %>
+    <div id="main">
+      <div id="nav">
+        <div id="nav1">
+          <a href="/"><h1>Khatabook</h1></a>
+        </div>
+        <div id="nav2">
+          <a href="/">Home</a>
+          <a href="/create">Create New Hisaab</a>
+        </div>
+      </div>
+      <div id="content">
+        <% if (files.length < 1){ %>
+        <h2>Currently nothing to show, Create a new hisaab</h2>
+        <% } else { %>
+        <h2>All Hisaab Kitaab</h2>
+        <% files.forEach((file) => { %>
+        <div class="files">
+          <div id="left">
+            <h4><%= file.split(".")[0] %></h4>
+            <a href="/view/<%= file %> "
+              ><div id="arrow"><i class="ri-arrow-right-line"></i></div
+            ></a>
+          </div>
+          <div id="right">
+            <a href="/edit/<%= file %>"
+              ><div id="edit">
+                <i class="ri-pencil-fill"></i></div
+            ></a>
+            <a href="/delete/<%= file %>"
+              ><div id="delete"><i class="ri-delete-bin-line"></i></div
+            ></a>
+          </div>
+        </div>
+        <% })} %>
+      </div>
+    </div>
   </body>
 </html>
